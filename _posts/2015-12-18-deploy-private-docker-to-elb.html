@@ -3,7 +3,7 @@ layout: post
 title:  "Deploy Private Docker to Elastic Beanstalk"
 date:   2015-12-18 01:09:40 -0500
 categories: Docker AWS ElasticBeanstalk
-author: Bruce Shaw
+author: BatteryAcidDev
 description:  Instructions for deploying a private Docker image to Elastic Beanstalk in AWS
 published: true
 ---
@@ -162,7 +162,7 @@ published: true
                 <li>Back in the Roles screen, select the new policy and under Inline Policies hit "click here" to create one.</li>
                 <li>Select Policy Generator</li>
                 <li>Select and enter the following: <br />
-                    <img src="/img/step5.jpg" class="img-responsive img-thumbnail" alt="instance-profile-role-edit">
+                    <img src="{{'/assets/img/step5.jpg' | absolute_url }}" class="img-responsive img-thumbnail" alt="instance-profile-role-edit">
                     <blockquote>
                         AWS Service: Amazon S3<br />
                         Actions: getObject<br />
@@ -186,7 +186,7 @@ published: true
             <ul>
                 <li>In the AWS Console create new Elastic Beanstalk Environment</li>
                 <li>Under source select "Upload your own" and give it the Dockerrun.aws.json file your created:<br />
-                    <img src="/img/step6.jpg" class="img-responsive img-thumbnail" alt="s3-application-source">
+                    <img src="{{'/assets/img/step6.jpg' | absolute_url }}" class="img-responsive img-thumbnail" alt="s3-application-source">
                 </li>
                 <li>After that just hit next until you get to Configuration Details.</li>
                 <li>On the configuration details it has t1.micro selected.  I bumped mine to t2.micro because I had memory issues while trying to run a using a Play Framework app.  Your app may be very small so you can probably leave it alone, up to you.</li>
